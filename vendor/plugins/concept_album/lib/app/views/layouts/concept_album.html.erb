@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Фотоальбом - Живой уголок</title>
+  <%= stylesheet_link_tag '/concept_album_asset/reset','/concept_album_asset/app','/concept_album_asset/jquery.lightbox-0.5.css' %>
+  <%= stylesheet_link_tag 'ju' %>
+  <%= javascript_include_tag '/concept_album_asset/jquery-1.3.2.js', '/concept_album_asset/jquery.lightbox-0.5.js' %> 
+  <%= yield :script %>
+          <%= javascript_include_tag 'ddaccordion.js' %>
+<script type="text/javascript">
+
+
+
+ddaccordion.init({
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+</script>
+</head>
+<body>
+  <div>
+<table>
+    <tr>
+        <td id='root_img'>
+          <%= link_to image_tag('ju.png', :alt=>'живой уголок'), ('/') %>
+        </td>
+	<td id='center'>
+          <div>
+            <h2>Культурный центр</h2>
+          </div>
+        </td>
+    </tr>
+	<tr>
+		<td id='menu'>
+          <div class="arrowlistmenu">
+		<ul>
+	  	  <li class="menuheader expandable"><%=link_to 'Клуб', events_path%></li>
+                  <ul class="categoryitems">
+                    <li><%=link_to 'О клубе', histories_path %></li>
+                    <li><%=link_to 'Анонс концертов', :controller=>:events, :action => :actual%></li>
+                    <li><%=link_to 'Расписание событий' %></li>
+                    <li><%=link_to 'Виртуальный клуб' %></li>
+                  </ul>
+		  <li class="menuheader expandable"><%=link_to 'История' %></li>
+                  <ul class="categoryitems">
+                    <li><%=link_to 'Архив концертов', :controller=>:events, :action => :archive%></li>
+                    <li><%=link_to 'Фотоотчеты', '/concept_album/' %></li>
+                    <li><%=link_to 'Аудио' %></li>
+                    <li><%=link_to 'Видео' %></li>
+                  </ul>
+		  <li><%=link_to 'Кто' %></li>
+		  <li><%=link_to 'Музыка' %></li>
+                  <li><%=link_to 'Заявка на участие' %></li>
+                  <li><%=link_to 'Как нас найти' %></li>
+		  <li><%=link_to 'In English' %></li>
+                  <li></li>
+		</ul>
+           </div>
+        </td>
+	<td  id="content">
+		<% flash.each do |key,value| %>
+         	<div id="flash" class="flash_<%= key %>" >
+          		<span class="message"><%= value %></span>
+         	</div>
+                <% end -%>
+                <%= yield %>
+        </td>
+	</tr>
+</table>
+<div id='footer'>
+
+</div>
+</div>
+</body>
+</html>

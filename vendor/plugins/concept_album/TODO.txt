@@ -1,0 +1,24 @@
+TODO
+=======
+	Turn on Rails caching of album pages timeout 5 minutes
+	
+  Fix permalinks
+	- Rake task to fix sizes of images for resizing
+  Add small download icon to lightbox to allow download of original image
+	Add Config option for calling img.destroy! for ImageMagick > 6.3?	This has memory implications
+	
+ - Tests
+ 	 - Test album info caching
+   - Test loading with normal environment
+     - Check loaded gems
+   - Get 3 images in 2 folders, inc subfolder
+
+  - Rake test to check gems?
+		
+	- uninstall 
+	- add Config.auto = false
+		this will make the system only work if raked
+	- ignore hidden images
+	- get rid of white boxes that show for unloaded images
+			Fix size to 100x100 (or bounds of :thumb_square size
+				Check other style stuff matches thumb_square dimensions

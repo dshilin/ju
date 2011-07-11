@@ -1,0 +1,22 @@
+<h1>История клуба</h1>
+
+<% for history in @histories %>
+  	<%= history.description %><br />
+<% end %>
+<% if logged_in? %>
+<div class='admtext'>
+	<% if History.count.zero? %>
+		<%= link_to 'Добавить текст на страницу История', new_history_path %>
+	<% else %>
+		<%= link_to 'Изменить текст на странице История', edit_history_path(history) %> |
+		<%= link_to 'Удалить текст со страницы История', history, :confirm => 'Вы уверены?', :method => :delete %>
+	<% end %>
+</div>
+<%end%>
+        <div id="log">
+          <% if logged_in? %>
+		<%= link_to '..', logout_path %>
+          <% else %>
+                <%= link_to '.', login_path %>
+          <% end %>
+	</div>

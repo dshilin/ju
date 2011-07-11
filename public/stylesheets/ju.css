@@ -1,0 +1,198 @@
+body {
+	padding:0px; margin:0; font-family:tahoma, arial, sans-serif; font-size:13px; text-decoration:none;
+        background-color: #222222;
+	color:#a1a1a1;
+}
+
+h1 {
+	font-size:   16px;
+}
+
+h2 {
+	font-size:   14px;
+}
+
+table tr, td  {
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+
+table  {
+        border-spacing: 0px;
+}
+
+a {
+	text-decoration:none;
+}
+
+a img {
+	border:none;
+}
+
+#mainphoto {
+    background-color: #FFFFFF;
+    width: 324px;
+    padding: 6px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#announcement_root #mainphoto{
+    margin-left: 52px;
+}
+
+#center div{
+    background-color: #363636;
+    padding: 1px;
+}
+
+#menu {
+    vertical-align: text-top;
+    padding-top: 6px;
+    width: 204px;
+    background-color: #2d6bd2;
+}
+
+#menu li {
+        list-style: none;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#menu ul ul li a {
+    font-size: 11px;
+    color: #888888;
+    padding-left: 46px;
+}
+#menu li {
+    border-top-width: 2px;
+    border-top-style: ridge;
+}
+#menu ul ul li {
+    border-top-width: 0px;
+}
+
+#menu li.thin{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#menu ul {
+    padding-left: 0px;
+    text-align: left;
+}
+
+#menu ul a {
+    padding-left: 18px;
+}
+
+#menu ul ul {
+    background-color: white;
+}
+
+#menu a {
+    color: black;
+}
+
+#menu a:hover {
+    color: #d38630;
+}
+
+#root_img {
+}
+
+#center {
+	width:765px;
+        background-color: #222222;
+        padding-top: 50px;
+
+}
+#center div {
+    padding-left: 16px;
+    color: #a1a1a1;
+    text-align: left;
+}
+#center h2 {
+    font-size: 23px;
+}
+
+#announcement {
+        background-color: #222222;
+        text-align: center;
+        padding: 18px;
+        vertical-align: top;
+
+}
+
+#announcement #mainphoto {
+    display: inline-block;
+    width: 146px;
+}
+
+#announcement_root h1{
+    color: #a1a1a1;
+}
+
+#content {
+	text-align:center;
+	width:444px;
+        padding: 18px;
+        vertical-align: top;
+}
+
+#content a{
+    color: #a1a1a1;
+}
+
+#content p {
+	text-indent:10px;
+	text-align:justify;	
+}
+
+#content h1 {
+	text-align:center;
+}
+
+.concert_name {
+    text-align: left;
+    padding-left: 28px;
+}
+
+.desc {
+    text-align: justify;
+    padding: 18px;
+    color: #a1a1a1;
+}
+
+.admtext {
+	text-align:center;
+}
+
+#log a {
+	color: #FFFFFF;
+}
+
+#log a:hover {
+	background-color:#39c4d2;
+}
+
+#ao {
+	font-size:12px;
+}
+
+#ao a {
+	font-style:oblique;
+}
+
+#footer {
+	width:1016px;
+}
+
+.message {
+	padding-left:20px;
+	color:red;
+}
+#attachment_list #pending_files{ list-style:none;padding:0; }
+#attachment_list li { padding:0 0 0.5em 21px;background:url('/images/attachment.png') no-repeat 0 2px; }
+#attachment_list li #remove { margin-left:1em; }
