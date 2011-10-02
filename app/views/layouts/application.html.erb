@@ -38,10 +38,10 @@ ddaccordion.init({
 </head>
 <body>
   <div align="center">
-<table>
+<table id="root">
     <tr>
         <td id='root_img' colspan="3">
-          <%= link_to image_tag('logo.jpg', :alt=>'живой уголок'), ('/') %>
+          <%= link_to image_tag('logo.png', :alt=>'живой уголок'), ('/') %>
         </td>
     </tr>
 	<tr>
@@ -71,7 +71,7 @@ ddaccordion.init({
 		</ul>
            </div>
         </td>
-	<td  id="content">
+	<td  id="content1">
 		<% flash.each do |key,value| %>
          	<div id="flash" class="flash_<%= key %>" >
           		<span class="message"><%= value %></span>

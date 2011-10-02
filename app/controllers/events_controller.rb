@@ -81,6 +81,6 @@ class EventsController < ApplicationController
 
 
  def find_announce
-    @announcements = Event.find(:all, :conditions => ['actual_time > ?', Time.now], :order=>:actual_time, :limit=>'1,2')
+    @announcements = Event.find(:all, :conditions => ['actual_time > ?', Time.now], :order=>:actual_time, :limit=>'1,3')
  end
 end

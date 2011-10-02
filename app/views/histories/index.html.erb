@@ -1,8 +1,14 @@
-<h1>История клуба</h1>
-
+<div id="mainphoto">
+  <%= image_tag('histoty.jpg') %>
+</div>
+<div class="announce_name">
+  АНДЕГРАУНД НОРМАЛЬНЫХ ЛЮДЕЙ
+</div>
+<div id="announce_desc_acc">
 <% for history in @histories %>
-  	<%= history.description %><br />
+  <%= history.description %><br />
 <% end %>
+</div>
 <% if logged_in? %>
 <div class='admtext'>
 	<% if History.count.zero? %>
@@ -13,10 +19,3 @@
 	<% end %>
 </div>
 <%end%>
-        <div id="log">
-          <% if logged_in? %>
-		<%= link_to '..', logout_path %>
-          <% else %>
-                <%= link_to '.', login_path %>
-          <% end %>
-	</div>

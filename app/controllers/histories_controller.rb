@@ -35,7 +35,7 @@ class HistoriesController < ApplicationController
     respond_to do |format|
       if @history.save
         flash[:notice] = 'Описание добавлено.'
-        format.html { redirect_to(@history) }
+        format.html { redirect_to(histories_path) }
         format.xml  { render :xml => @history, :status => :created, :location => @history }
       else
         format.html { render :action => "new" }

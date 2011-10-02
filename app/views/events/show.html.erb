@@ -1,8 +1,10 @@
-<h3><%= @event.name %></h3>
-<h2><%= @event.actual_time.strftime('%d-%m-%Y  %H:%M') %></h2>
-<%= image_tag(@event.photo.url(:original)) %>
-<div class="desc"><%= @event.description %><br/></div>
-<% if logged_in? %>
-<%= link_to 'Редактировать', edit_event_path(@event) %> |
-<%= link_to 'Назад', events_path %>
-<% end %>
+
+<div id="mainphoto">
+  <%= link_to image_tag(@event.photo.url(:original)), event_path(@event) %>
+</div>
+<div class="announce_name">
+  <%= @event.name %>
+</div>
+<div id="announce_desc_acc">
+  <%= @event.description %>
+</div>
