@@ -1,5 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.album
+  
+  map.resources :contacts
+
   map.resources :histories
 
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'

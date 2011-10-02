@@ -1,0 +1,39 @@
+&nbsp;
+<div class='content'>
+<% for contact in @contacts %>
+  	<%= contact.description %><br />
+<% end %>
+
+<% if logged_in? %>
+	<% if Contact.count.zero? %>
+		<%= link_to 'Добавить текст страницу Контакты', new_contact_path %>
+	<% else %>
+		<%= link_to 'Изменить текст странице Контакты', edit_contact_path(contact) %> |
+		<%= link_to 'Удалить текст со страницы Контакты', contact, :confirm => 'Вы уверены?', :method => :delete %>
+	<% end %>
+	| <%= link_to 'Просмотреть сообщения', messages_path %>
+	<br />
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+	document.write("<a href='http://www.liveinternet.ru/click' "+
+	"target=_blank><img src='//counter.yadro.ru/hit?t27.6;r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random()+
+	"' alt='' title='LiveInternet: показано количество просмотров и"+
+	" посетителей' "+
+	"border='0' width='88' height='120'><\/a>")
+	//--></script><!--/LiveInternet-->
+
+<% end %>
+</div>
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1694423 = new Ya.Metrika(1694423);
+yaCounter1694423.clickmap();
+yaCounter1694423.trackLinks({external: true});
+} catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1694423" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->

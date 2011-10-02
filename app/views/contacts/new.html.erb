@@ -1,0 +1,12 @@
+
+<div class='content'>
+<% form_for(@contact) do |f| %>
+  <%= f.error_messages %>
+  <p><%= label_tag 'Добавить текст на страницу История' %><br/>
+  	<%= f.text_area(:description, :size => "75x10") %>
+  </p>
+  <p>
+    <%= f.submit "Добавить" %>
+  </p>
+<% end %>
+</div>
